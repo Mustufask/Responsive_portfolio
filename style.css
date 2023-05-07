@@ -1,0 +1,164 @@
+/* Global view/desktop view */
+html {
+    color: white;
+    margin: 0;padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+}
+
+.header-container {
+    min-height: 100px;
+    max-width: 1024px;
+    background-color: grey;
+    margin-bottom: 40px;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    /* background-color: chartreuse; */
+    max-width: 1024px;
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.mybutton {
+    padding: 10px 25px;
+    border-style: outset;
+    border-width: 1px;
+    margin: 20px;
+}
+
+.highlight {
+    color: antiquewhite;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.container {
+    min-height: 400px;
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.col {
+    background-color: darkgrey;
+    width: 30%;
+    /* min-height: 200px; */
+    margin-bottom: 20px;
+}
+
+.hide-desktop-only {
+    display: none;
+}
+
+.col img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.col p::first-line {
+    font-weight: bold;
+}
+
+.col p {
+    font-size: 0.875rem;
+    padding: 10px;
+    line-height: 1.25rem;
+}
+
+.mob-wrapper {
+    display: none;
+}
+
+
+
+
+
+/* Tablet view */
+@media (max-width: 768px){
+    .col {
+    width: 45%;
+    }
+
+    .hide-desktop-only {
+        display: block;
+    }
+
+    
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    .header-container {
+        position: relative;
+    }
+
+    .logo {
+        padding: 20px 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header > nav > a {
+        display: block;
+    }
+
+    .mybutton {
+        margin: 0;
+    }
+
+    .container {
+        padding-top: 7px;
+    }
+
+    .mob-wrapper {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .mob-nav {
+        display: none;
+        position: absolute;
+    }
+
+    .navbutton {
+        display: block;
+        background-color: coral;
+        padding: 15px 30px;
+        margin-left: 50px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 400px){
+    .col {
+        width: 100%;
+     }
+
+     .hide-mobile {
+        display: none;
+    }
+}
